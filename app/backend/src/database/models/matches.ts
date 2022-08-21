@@ -21,7 +21,7 @@ Matches.init({
     type: INTEGER,
     allowNull: false,
     references: {
-      model: 'Team',
+      model: 'teams',
       key: 'id',
     },
   },
@@ -33,7 +33,7 @@ Matches.init({
     type: STRING,
     allowNull: false,
     references: {
-      model: 'Team',
+      model: 'teams',
       key: 'id',
     },
   },
