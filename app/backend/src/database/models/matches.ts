@@ -1,4 +1,4 @@
-import { Model, INTEGER, STRING, BOOLEAN } from 'sequelize';
+import { Model, INTEGER, BOOLEAN } from 'sequelize';
 import db from '.';
 import Team from './team';
 
@@ -26,11 +26,11 @@ Matches.init({
     },
   },
   homeTeamGoals: {
-    type: STRING,
+    type: INTEGER,
     allowNull: false,
   },
   awayTeam: {
-    type: STRING,
+    type: INTEGER,
     allowNull: false,
     references: {
       model: 'teams',
@@ -38,7 +38,7 @@ Matches.init({
     },
   },
   awayTeamGoals: {
-    type: STRING,
+    type: INTEGER,
     allowNull: false,
   },
   inProgress: {
