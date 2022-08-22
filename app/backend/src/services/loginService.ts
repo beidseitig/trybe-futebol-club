@@ -14,13 +14,13 @@ export default class LoginService {
     const { error } = schema.validate({ email, password });
 
     if (error) {
-      throw new ErrorHandler(StatusCodes.BAD_REQUEST, 'Some required fields are missing');
+      throw new ErrorHandler(StatusCodes.BAD_REQUEST, 'All fields must be filled');
     }
 
     const userLogin = await User.findOne({ where: { email } });
 
     if (!userLogin) {
-      throw new ErrorHandler(StatusCodes.UNAUTHORIZED, 'Invalid email or password');
+      throw new ErrorHandler(StatusCodes.UNAUTHORIZED, 'Incorrect email or password');
     }
 
     const token = jwt.createToken({ email });

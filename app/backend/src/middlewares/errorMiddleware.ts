@@ -1,24 +1,12 @@
 import { ErrorRequestHandler } from 'express';
+import { StatusCodes } from 'http-status-codes';
 
-const errorMiddleware: ErrorRequestHandler = (err, _req, res, _next) => {
+const errorMiddleware: ErrorRequestHandler = async (err, _req, res, _next) => {
   const { status, message } = err;
-  switch (status) {
-    case 'ValidationError':
-      res.status(400).json({ message });
-      break;
-    case 'NotFoundError':
-      res.status(404).json({ message });
-      break;
-    case 'ConflictError':
-      res.status(409).json({ message });
-      break;
-    case 'SequelizeConnectionRefusedError':
-      res.status(503).end();
-      break;
-    default:
-      res.status(500).json({ message });
-      break;
+  if (!status) {
+    return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ message: err.message });
   }
+  res.status(status).json({ message });
 };
 
 export default errorMiddleware;
