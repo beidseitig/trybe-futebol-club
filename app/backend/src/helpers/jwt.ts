@@ -1,5 +1,7 @@
 import * as jwt from 'jsonwebtoken';
 import * as dotenv from 'dotenv';
+import { StatusCodes } from 'http-status-codes';
+import ErrorHandler from './errorHandler';
 
 dotenv.config();
 
@@ -12,5 +14,14 @@ export default class JwtService {
       algorithm: 'HS256',
     };
     return jwt.sign(payload, secret, jwtConfig);
+  }
+
+  static verifyToken(token: string) {
+    try {
+      const check = jwt.verify(token, secret);
+      return check;
+    } catch (err) {
+      throw new ErrorHandler(StatusCodes.UNAUTHORIZED, 'Token must be a valid token');
+    }
   }
 }

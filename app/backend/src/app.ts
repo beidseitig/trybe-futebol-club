@@ -24,7 +24,7 @@ class App {
 
     this.app.use(express.json());
     this.app.use(accessControl);
-    this.app.use(router.loginRouter);
+    this.app.use('/login', router.loginRouter);
     this.app.use(errorMiddleware);
   }
 
