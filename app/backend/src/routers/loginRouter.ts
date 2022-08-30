@@ -8,6 +8,6 @@ router.post('/', LoginController.login);
 
 router.use(tokenValidation);
 
-router.get('/validate', LoginController.loginValidation);
+router.get('/validate', (req, res) => LoginController.loginValidation(req, res));
 
 export default router;

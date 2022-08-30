@@ -12,7 +12,7 @@ export default class Bcrypt {
     const check = bcrypt.compareSync(password, hash);
 
     if (!check) {
-      throw new ErrorHandler(StatusCodes.UNAUTHORIZED, 'Incorrect password');
+      throw new ErrorHandler(StatusCodes.UNAUTHORIZED, 'Incorrect email or password');
     }
   }
 }
