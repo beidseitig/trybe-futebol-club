@@ -19,7 +19,6 @@ export default class JwtService {
   static verifyToken(token: string) {
     try {
       const check = jwt.verify(token, secret);
-      console.log(check);
       return check;
     } catch (err) {
       throw new ErrorHandler(StatusCodes.UNAUTHORIZED, 'Token must be a valid token');
