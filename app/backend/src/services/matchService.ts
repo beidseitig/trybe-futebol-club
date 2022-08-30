@@ -44,4 +44,11 @@ export default class MatchService {
   static async matchGoals(id: number, goals: MatchGoals): Promise<void> {
     await Matches.update({ ...goals }, { where: { id } });
   }
+
+  static async getFinished(): Promise<Matches[]> {
+    const matches = await Matches.findAll({
+      where: { inProgress: false },
+    });
+    return matches as Matches[];
+  }
 }
