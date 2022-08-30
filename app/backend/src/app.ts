@@ -28,6 +28,7 @@ class App {
     this.app.use(cors());
     this.app.use('/login', router.loginRouter);
     this.app.use('/teams', router.teamRouter);
+    this.app.use('/matches', router.matchRouter);
     this.app.use(errorMiddleware);
   }
 

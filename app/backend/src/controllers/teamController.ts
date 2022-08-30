@@ -3,7 +3,7 @@ import { StatusCodes } from 'http-status-codes';
 import TeamService from '../services/teamService';
 
 export default class TeamController {
-  static async getAll(req: Request, res: Response, next: NextFunction): Promise<Response | void> {
+  static async getAll(_req: Request, res: Response, next: NextFunction): Promise<Response | void> {
     try {
       const teams = await TeamService.getAll();
       return res.status(StatusCodes.OK).json(teams);
