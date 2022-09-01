@@ -10,9 +10,9 @@ const tokenValidation = (req: Request, res: Response, next: NextFunction) => {
   }
 
   const token = jwt.verifyToken(authorization);
+  console.log(token);
 
   const { role } = token as Jwt.JwtPayload;
-  console.log(`token ${role}`);
 
   req.body.user = role;
 

@@ -21,12 +21,12 @@ export default class MatchController {
     }
   }
 
-  static async finishMatch(req: Request, res: Response, next: NextFunction)
+  static async updateMatch(req: Request, res: Response, next: NextFunction)
     : Promise<Response | void> {
     try {
       const { id } = req.params;
-      await MatchService.finishMatch(Number(id));
-      return res.status(StatusCodes.OK).json({ message: 'Match finished' });
+      await MatchService.updateMatch(Number(id));
+      return res.status(StatusCodes.OK).json({ message: 'Match updated' });
     } catch (err) {
       next(err);
     }

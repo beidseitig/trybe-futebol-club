@@ -37,7 +37,7 @@ export default class MatchService {
     return newMatch;
   }
 
-  static async finishMatch(id: number): Promise<void> {
+  static async updateMatch(id: number): Promise<void> {
     await Matches.update({ inProgress: false }, { where: { id } });
   }
 
