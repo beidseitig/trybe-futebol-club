@@ -1,16 +1,27 @@
-# 🚧 README em construção 🚧
+# Trybe Futebol Clube
 
-<!-- Olá, Tryber!
+# Contexto
+Este foi um dos muitos projetos desenvolvidos por mim enquanto estudante da Trybe. Esse foi um projeto particulamente dificil e por isso ele tem uma grande importância e destaque para mim enquanto desenvolvedor.
 
-Esse é apenas um arquivo inicial para o README do seu projeto.
+# Disclaimer
+Nesse projeto, a única parte/código feita por mim foi o backend no diretório app/backend e o arquivo Dockerfile no diretório app/frontend, sendo todo o resto feito pela empresa Trybe e de sua propriedade.
 
-É essencial que você preencha esse documento por conta própria, ok?
+## Técnologias usadas
 
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
+Back-end:
+> As tecnologias usadas nesse projeto foram:
+-MySQL
+-Sequelize
+-Docker
+-Arquitetura MSC
+-Node.js
+-TypeScript
 
-⚠️ IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
+## Instalando Dependências
 
--->
+> Estando no diretório raíz do projeto, execute no terminal:
+```
+ npm run compose:up:dev
+```
+
+Esse comando irar criar os 3 containers necessários para rodar a aplicação, estando o frontend na porta local 3000, enquanto o backend estara rodando na porta local 3001.
