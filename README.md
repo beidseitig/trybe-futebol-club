@@ -1,7 +1,7 @@
 # Trybe Futebol Clube
 
-# Disclaimer
-Nesse projeto, a única parte/código feita por mim foi a parte de backend da aplicação no diretório app/backend e o arquivo Dockerfile no diretório app/frontend, sendo todo o resto feito pela empresa Trybe e de sua propriedade.
+# :warning: Disclaimer
+:warning: Nesse projeto, a única parte/código feita por mim foi a parte de backend da aplicação no diretório app/backend e o arquivo Dockerfile no diretório app/frontend, sendo todo o resto feito pela empresa Trybe e de sua propriedade. :warning:
 
 # Contexto
 
