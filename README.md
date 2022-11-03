@@ -30,7 +30,7 @@ Essa aplicação foi desenvolvida utilizando **TypeScript**, enquanto o banco de
 
 
 ## Instalando Dependências
-### :warning: Toda essa aplicação roda utilizando **Docker**, sendo o unico software necessário para rodar a aplicação.
+### :warning: Toda essa aplicação roda utilizando **Docker**, sendo necessário ter o Docker e o Node.js com acesso ao npm(Node Package Manager) instalados em sua máquina.
 
 Estando no diretório raíz do projeto, execute no terminal:
 ```
